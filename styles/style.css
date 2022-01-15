@@ -10,6 +10,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #f3f1ff;
 }
 
 /* --------------------------------------
@@ -69,14 +71,124 @@ nav a {
 }
 
 .link-button {
-  text-decoration: none;
+  display: inline;
   background-color: deeppink;
-
   padding: 10px 30px;
   border-radius: 40px;
+  margin: 0;
+}
+.fa-arrow-right {
+  margin-left: 10px;
+}
+
+.link-button a {
+  text-decoration: none;
   color: white;
   font-weight: 400;
-  margin: 0;
+}
+
+#main-image {
+  padding-left: 300px;
+}
+
+/* -----------------------------
+-----start section 2 styles-----
+------------------------------*/
+.collections {
+  padding-top: 60px;
+}
+.collections h2 {
+  text-align: center;
+}
+.product {
+  border-radius: 10px;
+  background-color: white;
+  width: 300px;
+  box-shadow: 5px 10px 40px gray;
+  padding: 20px;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px 25px;
+  justify-items: center;
+}
+.product h1 {
+  line-height: 20px;
+}
+
+.see-morebtn {
+  text-align: right;
+  margin-top: 20px;
+}
+.see-morebtn a {
+  text-decoration: none;
+  color: deeppink;
+  font-size: 20px;
+}
+.album-space {
+  width: 80%;
+  margin: auto;
+}
+.fa-star.filled {
+  color: #ffc014;
+}
+.fa-star.empty {
+  color: #aeaeae;
+  margin-right: 20px;
+}
+
+.rating-info {
+  display: flex;
+  align-items: center;
+}
+.product p {
+  color: #aeaeae;
+}
+/* -----------------------------
+-----start Footer styles-----
+------------------------------*/
+footer {
+  text-align: center;
+  background-color: rgb(6, 6, 37);
+  color: white;
+  margin-bottom: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 250px;
+}
+footer h2 {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+footer p {
+  margin-top: 10px;
+}
+
+.socialmedia-area {
+  width: 300px;
+  margin: auto;
+  padding: 0;
+}
+.icons {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  background-color: rgb(24, 23, 23);
+  border-radius: 100%;
+  padding-top: 2px;
+}
+.icons a {
+  font-size: 25px;
+  color: white;
+  margin: auto;
+  text-align: center;
+}
+.social-media-icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px 25px;
+  justify-items: center;
 }
 
 /* -----------------------------
@@ -84,7 +196,7 @@ nav a {
 ------------------------------*/
 
 /* for nav bar */
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
   header {
     margin-top: 30px;
     margin-right: 40px;
@@ -102,12 +214,54 @@ nav a {
   }
 
   /* for section 1 */
+
+  .flexible-container {
+    display: flex;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+
+  .half-width {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+  }
+  .half-width h1 {
+    font-size: 30px;
+  }
+  .half-width p {
+    font-size: 15px;
+    padding-bottom: 15px;
+  }
+
+  #imsize {
+    height: 300px;
+  }
+  #main-image {
+    padding-left: 30px;
+    margin-top: 50px;
+  }
+
+  /* for section 2 */
+  .collections h2 {
+    text-align: center;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px 25px;
+    justify-items: center;
+  }
+  .see-morebtn {
+    text-align: center;
+  }
 }
 
 /* -----------------------------
 ----media query for mobile view-----
 ------------------------------*/
-@media (max-width: 576px) {
+@media (max-width: 870px) {
   .checkbtn {
     font-size: 1em;
     color: black;
@@ -124,5 +278,50 @@ nav a {
   }
   #search {
     display: none;
+  }
+
+  /* for section 1 */
+  .flexible-container {
+    display: flex;
+    margin-bottom: 30px;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .half-width {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .half-width h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .half-width p {
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 15px;
+  }
+
+  #imsize {
+    height: 300px;
+  }
+  .link-button {
+    margin-left: 25%;
+  }
+  #main-image {
+    padding-left: 30px;
+    margin-top: 50px;
+  }
+
+  /* for section 2 */
+  .products {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 25px 25px;
+    justify-items: center;
+  }
+  .see-morebtn {
+    text-align: center;
   }
 }
